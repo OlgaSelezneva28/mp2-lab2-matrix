@@ -36,12 +36,19 @@ TEST(TMatrix, copied_matrix_has_its_own_memory)
 
 TEST(TMatrix, can_get_size)
 {
-  ADD_FAILURE();
+  const int size =  5;
+  TMatrix<int> m(5);
+
+  ASSERT_EQ(size, m.GetSize());
 }
 
 TEST(TMatrix, can_set_and_get_element)
 {
-  ADD_FAILURE();
+  const int size =  5;
+  TMatrix<int> m(5);
+  m[2][2] = 3;
+
+  ASSERT_EQ(3, m[2][2]);
 }
 
 TEST(TMatrix, throws_when_set_element_with_negative_index)
