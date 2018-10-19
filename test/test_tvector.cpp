@@ -82,7 +82,7 @@ TEST(TVector, throws_when_set_element_with_too_large_index)
 {
 	TVector<int> v(10);
 
-	ASSERT_NO_THROW(v[11]);
+	ASSERT_ANY_THROW(v[12] = 6);
 }
 
 TEST(TVector, can_assign_vector_to_itself)
